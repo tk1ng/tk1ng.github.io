@@ -1,10 +1,5 @@
-# Hi! 😎
+Welcome to my portfolio site. 
 
-I'm Taryn, a self-taught developer. 
-
-#Currently focusing on..
-- Improving my skills with JavaScript
-- Learning React.js and Node.js
-- Exploring APIs
+Explore my code and check out my site here: http://www.tarynking.me
 
 Connect with me on [twitter](https://www.twitter.com/iimkiing)
