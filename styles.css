@@ -14,6 +14,12 @@ body {
   font-family: "Exo", sans-serif;
 }
 
+body > div {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+}
+
 h1 {
   margin: 0;
   font-size: 3.8rem;
