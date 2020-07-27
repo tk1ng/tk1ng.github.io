@@ -7,17 +7,12 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
   margin: 0;
   font-family: "Exo", sans-serif;
-}
-
-body > div {
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-overflow-scrolling: touch;
 }
 
 h1 {
@@ -311,6 +306,7 @@ button:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 40px;
 }
 
 #contact p {
