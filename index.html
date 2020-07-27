@@ -1,7 +1,226 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Taryn King</title>
-    </head>
-<h1>Website Coming Soon</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Taryn King - Web Developer</title>
+    <link rel="icon" href="media/crown.png" type="image/jpg" sizes="16x16" />
+
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@200;300;400&family=Fira+Sans:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/83b9b60de8.js"
+      SameSite="none"
+    ></script>
+  </head>
+  <body>
+    <div class="return-top">
+      <a href="#main"> <i class="fas fa-3x fa-arrow-circle-up up"></i></a>
+    </div>
+
+    <!-- Site Landing View -->
+
+    <section id="main" class="landing">
+      <div class="landing-content-container">
+        <div class="flex">
+          <div class="title">
+            <h1>I am <span>King</span>.</h1>
+            <p class="subtitle">&lt; Web Developer /&gt;</p>
+          </div>
+          <a href="#about"><div class="button">View Work</div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Bar-->
+
+    <nav class="navbar-container">
+      <div class="row">
+        <a class="nav-logo" href=""
+          ><img src="media/crown.png" width="40px"
+        /></a>
+        <div class="navbar">
+          <ul class="navlinks">
+            <li><a href="#about">about</a></li>
+            <li><a href="#portfolio">work</a></li>
+            <li>
+              <a href="mailto:marshaeking@gmail.com"
+                ><i class="far fa-envelope"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/TK1ng" target="_blank">
+                <i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/taryn-king/" target="_blank">
+                <i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/iimkiing" target="_blank">
+                <i class="fab fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Skills and Experience-->
+
+    <section id="about" class="about-me">
+      <div class="flex hidden">
+        <h2>About Me</h2>
+        <hr />
+        <div class="flex-row">
+          <div class="intro">
+            <p class="lead-in">
+              I'm a web developer based in Dallas, Texas.
+            </p>
+            <p>
+              I enjoy solving complex problems with the simplicity of clean and
+              effective code and design. When not coding or expanding my
+              knowledge, you'll find me playing guitar, sipping matcha green tea
+              lattes or watching horror films.
+            </p>
+          </div>
+        </div>
+
+        <a href="Taryn_King.pdf" download
+          ><button class="download-btn">Download Resume</button></a
+        >
+      </div>
+
+      <!-- tools -->
+
+      <h2 class="tools-title hidden">Tools I Use</h2>
+      <hr />
+      <div class="toolbox-container hidden">
+        <div class="toolbox">
+          <ul class="tools">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="work">
+      <!-- Projects -->
+
+      <div class="flex hidden">
+        <h2 class="headers">My Work</h2>
+        <hr />
+      </div>
+      <div>
+        <ul class="project-container">
+          <li class="project-tile hidden">
+            <a href="http://www.tarynking.me/guitarStar/"
+              ><img src="media/guitarstar thumbnail.png" width="300px" />
+              <div class="project-desc">
+                <h5>View Live</h5>
+                <p>Example landing page design for app</p>
+                <span>HTML</span><span>CSS</span><span>Bootstrap</span>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile hidden">
+            <a href="https://github.com/TK1ng/tk1ng.github.io"
+              ><img
+                src="media/personal site thumbnail.png"
+                width="300px"
+                height="146.95"
+              />
+              <div class="project-desc">
+                <h5>View Code</h5>
+                <p>My personal portfolio website</p>
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </a>
+          </li>
+          <!-- <li class="project-tile">
+            <a href="http://www.tarynking.me/guitarStar/"
+              ><img src="guitarstar thumbnail.png" width="300px" />
+              <div class="project-desc">
+                <p>Mobile app landing page design</p>
+                <span>HTML</span><span>CSS</span><span>Bootstrap</span>
+              </div>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact form -->
+
+    <section id="contact">
+      <div class="flex hidden">
+        <h2 class="headers">Connect With Me!</h2>
+        <hr />
+
+        <p>
+          If you think I'd be a great fit for an opportunity, interested in a
+          collaboration, or just want to connect then send a message.
+        </p>
+        <div class="message-me">
+          <a href="mailto:marshaeking@gmail.com">
+            <i class="fas fa-paper-plane fa-3x"></i
+          ></a>
+        </div>
+        <!-- <div class="form-container">
+          <form id="contact-form" action="/contactform.php" method="post">
+            <input
+              type="text"
+              name="firstname"
+              id="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <textarea
+              type="text"
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea
+            ><br />
+            <button class="submit-button" id="submit" type="submit" name="send">
+              SEND
+            </button>
+          </form>
+        </div> -->
+      </div>
+    </section>
+    <footer>
+      <div class="flex-footer">
+        <div class="footer-icons">
+          <a href="https://github.com/TK1ng" target="_blank">
+            <i class="fab fa-github fa-2x"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/taryn-king/" target="_blank">
+            <i class="fab fa-linkedin-in fa-2x"></i
+          ></a>
+          <a href="https://www.twitter.com/iimkiing" target="_blank">
+            <i class="fab fa-twitter fa-2x"></i
+          ></a>
+        </div>
+        <p class="copyright">Taryn King&nbsp; &#169;2020</p>
+      </div>
+    </footer>
+    <script src="javascript.js"></script>
+  </body>
 </html>
