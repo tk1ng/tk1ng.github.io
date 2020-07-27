@@ -188,7 +188,7 @@ button:hover {
   background-color: white;
   box-shadow: 1px 4px 10px 0.5px #888888;
   border-radius: 3px;
-  opacity: 0.8;
+  opacity: 1;
   transition: all 0.3s ease-in-out;
 }
 
@@ -591,6 +591,13 @@ li:hover {
 @media only screen and (min-width: 950px) {
   .intro {
     width: 900px;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .project-tile {
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
   }
 }
 
