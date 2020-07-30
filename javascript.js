@@ -69,7 +69,7 @@ anchorTags.forEach((element) =>
 );
 
 function smoothScroll(event) {
-  // event.preventDefault();
+  event.preventDefault();
 
   const targetId =
     event.currentTarget.getAttribute("href") === "#"
