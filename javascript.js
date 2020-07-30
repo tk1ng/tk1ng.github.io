@@ -1,11 +1,11 @@
-let returnToTop = document.querySelector(".return-top");
+const returnToTop = document.querySelector(".return-top");
 
 window.onscroll = function () {
-  scrollFunctionNav();
-  scrollFunction();
+  scrollFunctionNavbar();
+  scrollFunctionReturnTop();
 };
 
-function scrollFunction() {
+function scrollFunctionReturnTop() {
   if (
     document.body.scrollTop > 1100 ||
     document.documentElement.scrollTop > 1100
@@ -18,7 +18,7 @@ function scrollFunction() {
   }
 }
 
-function scrollFunctionNav() {
+function scrollFunctionNavbar() {
   const navBar = document.querySelector(".navbar-container");
   if (
     document.body.scrollTop > 1115 ||
@@ -59,3 +59,44 @@ function scrollFunctionNav() {
   init();
   checkPosition();
 })();
+
+// Cross-browser smooth scroll effect
+
+const anchorTags = document.querySelectorAll(".scroll");
+
+anchorTags.forEach((element) =>
+  element.addEventListener("click", smoothScroll)
+);
+
+function smoothScroll(event) {
+  // event.preventDefault();
+
+  const targetId =
+    event.currentTarget.getAttribute("href") === "#"
+      ? "header"
+      : event.currentTarget.getAttribute("href");
+
+  const targetPosition = document.querySelector(targetId).offsetTop;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const duration = 500;
+  let start = null;
+
+  window.requestAnimationFrame(animationScroll);
+
+  function animationScroll(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    // window.scrollTo(0, distance * (progress / duration) + startPosition);
+    window.scrollTo(0, easeScroll(progress, startPosition, distance, duration));
+
+    if (progress < duration) window.requestAnimationFrame(animationScroll);
+  }
+}
+
+function easeScroll(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return (c / 2) * t * t + b;
+  t--;
+  return (-c / 2) * (t * (t - 2) - 1) + b;
+}
